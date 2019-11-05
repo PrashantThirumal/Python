@@ -3,7 +3,7 @@ Refer to the proj2.pdf for the assignment instructions
 Major changes:
 1. Arranging global variables and comments. The previous version (project 1) looked too messy. So I redesigned the python file
 2. Reading the following sensor data: Cliffs, Bumpers and wheel drops
-3. Uploading and playing a song 
+3. Uploading and playing a song. (Song choice: Imperial March)
 
 Thought process:
 Ideally I would have liked to use the Stream function (Refer to Roomba open interface spec)
@@ -15,6 +15,8 @@ Instead I implemented sempahores. There is a constant need to read sensor data. 
 from the serial port, you get a resource busy error. It makes sense as when one thread is trying to read data from the serial port
 another thread is simultaneously trying to write to the serial port. Hence by implementing semaphores for each method, it let me avoid the 
 synchronisation problem altogether. 
+
+Due to a lack of time, I did not implement data logging. (It was extra credit)
 
 Pitfalls:
 You need to press and hold the clean button for 1-2 seconds and let go immediately after. After a short delay, the Roomba will start moving.

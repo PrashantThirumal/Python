@@ -22,4 +22,4 @@ Pitfalls:
 You need to press and hold the clean button for 1-2 seconds and let go immediately after. After a short delay, the Roomba will start moving.
 The reason being -> semaphores. Pressing the clean button while another method is in the crtical section yields no result. By pressing and
 holding the clean button for 1-2 seconds you would be at the exact time that the clean button method would read the state of the button.
-Holding it for longer means the method reads the button press twice, resulting in a neagtion of the intial button press. 
+Holding it for longer means the method reads the button press twice, resulting in a negation of the intial button press. 
